@@ -5,7 +5,7 @@ import { Platform } from "./useGames";
 
 const apiClient = new APIClient<Platform>("/platforms/lists/parents");
 
-const usePlatform = () =>
+const usePlatforms = () =>
   useQuery({
     queryKey: ["platforms"],
     queryFn: apiClient.getAll,
@@ -13,4 +13,4 @@ const usePlatform = () =>
     initialData: platforms,
   });
 
-export default usePlatform;
+export default usePlatforms;
